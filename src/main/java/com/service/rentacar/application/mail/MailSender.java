@@ -15,9 +15,7 @@ public interface MailSender
 
     void send(MimeMessage mimeMessage) throws CouldNotSendMailException;
 
-    /**
-     * Used only in development/test environment.
-     */
+
     @Deprecated
     @Slf4j
     class NoOpMailSender implements MailSender
