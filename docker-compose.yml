@@ -26,7 +26,7 @@ services:
     ports:
       - "3316:3306"
     volumes:
-      - ./db:/var/lib/mysql
+      - db_data:/var/lib/mysql
     networks:
       - rentacar
 
@@ -93,3 +93,5 @@ services:
 networks:
   rentacar:
     driver: bridge
+volumes:
+  db_data:
