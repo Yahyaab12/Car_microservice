@@ -1,0 +1,37 @@
+<div class='footer' *ngIf='!isMobile; else mobile'>
+  <div class='wrapper'>
+
+    <div class='footer__boxes'>
+
+      <div class='footer__box'>
+        <h3 class='footer__box-title'>RentaCar</h3>
+        <div class='footer__box-social'>
+          <a href='#' class='footer__box-link'><i class='pi pi-twitter'></i></a>
+          <a href='#' class='footer__box-link'><i class='pi pi-facebook'></i></a>
+          <a href='#' class='footer__box-link'><i class='pi pi-instagram'></i></a>
+        </div>
+      </div>
+
+
+      <div class='footer__box footer__box-desktop'>
+        <h3 class='footer__box-title'>Miasta</h3>
+        <ul class='footer__box-list'>
+        </ul>
+      </div>
+      <div class='footer__box footer__box-desktop'>
+        <h3 class='footer__box-title'></h3>
+        <ul class='footer__box-list'>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <p class='footer__bottom-text'>&copy; <span class='footer__year'>{{year}}</span> RentaCar</p>
+
+</div>
+
+<ng-template #mobile>
+  <div class='footer-mobile'>
+    <p class='footer__bottom-text'>&copy; <span class='footer__year'>{{year}}</span> RentaCar</p>
+  </div>
+</ng-template>

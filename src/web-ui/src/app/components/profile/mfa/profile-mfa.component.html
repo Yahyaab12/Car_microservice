@@ -1,0 +1,69 @@
+<form [formGroup]='form' *ngIf='userProfile'>
+
+  <div class='mfa-wrapper'>
+    <div class='mfa-header-container'>
+      <div class='mfa-type-container'>
+        <ng-container *ngFor='let mfaType of availableMfaTypes'>
+          <div class='mfa-info'>
+            <ng-container *ngIf="mfaType === 'TOTP'">
+              <fa-icon icon='mobile-screen'></fa-icon>
+              <div class='title-info-container'>
+                <div class='title'>{{'components.profile-mfa.totp.title' | translate}}</div>
+                <div class='info'>{{'components.profile-mfa.totp.info' | translate}}
+                </div>
+              </div>
+            </ng-container>
+            <button class='btn'
+                    (click)='selectedMfaType = mfaType'
+                    *ngIf='!mfaSettings || !mfaSettings.verified; else delete'>{{'components.profile-mfa.buttons.configure' | translate}}
+            </button>
+            <ng-template #delete>
+              <button class='btn'
+                      (click)='openInfoMfaDialog()'>{{'components.profile-mfa.buttons.details' | translate}}
+              </button>
+              <button class='btn'
+                      (click)='deleteMfaConfirmDialog()'>{{'components.profile-mfa.buttons.delete' | translate}}
+              </button>
+            </ng-template>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <div class='mfa-container'>
+      <ng-container *ngIf="selectedMfaType === 'TOTP'">
+        <profile-mfa-totp [userProfileId]='userProfile.id' [form]='getTotpForm()'></profile-mfa-totp>
+      </ng-container>
+    </div>
+  </div>
+
+
+  <div class='button-container'>
+    <button class='btn'
+            (click)='save()' [disabled]='form.invalid'>{{'components.profile-mfa.buttons.save' | translate}}
+    </button>
+  </div>
+</form>
+
+<p-confirmDialog
+  message="{{'components.profile-mfa.dialog.delete.message' | translate}}"
+  header="{{'components.profile-mfa.dialog.delete.header' | translate}}"
+  acceptLabel="{{'components.profile-mfa.dialog.delete.accept' | translate}}"
+  rejectLabel="{{'components.profile-mfa.dialog.delete.reject' | translate}}"
+  icon='pi pi-exclamation-triangle'
+  key='delete-mfa'
+></p-confirmDialog>
+
+<p-confirmDialog
+  header="{{'components.profile-mfa.dialog.recovery-codes.header' | translate}}"
+  acceptLabel="{{'components.profile-mfa.dialog.recovery-codes.accept' | translate}}"
+  icon='pi pi-exclamation-triangle'
+  key='recovery-codes'
+  [rejectVisible]='false'
+></p-confirmDialog>
+
+<p-confirmDialog
+  acceptLabel='OK'
+  icon='pi pi-info-circle'
+  key='mfa-info'
+  [rejectVisible]='false'
+></p-confirmDialog>

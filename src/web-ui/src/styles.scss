@@ -1,0 +1,208 @@
+/* Imports */
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/fonts/Roboto-Regular.ttf");
+}
+
+/* Overall */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-image: url(./assets/images/Fotolia_94386317_Subscription_Monthly_M.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200vh;
+}
+
+/* App defined colors */
+:root {
+  --main-color-icon: white;
+  --top-nav-color: #222831;
+  --main-font: #eeeeee;
+  --second-color: #0092ca;
+  --third-color: #393e46;
+  --gold: #d6c78e;
+}
+
+body {
+  font-family: Roboto, serif;
+  //TODO @Bobus123 relative => to powoduje, że wszystkie tooltipy (chmurki po najechaniu na np. ikonę języka z podpwiedzią nie przylegają do elementu)
+  position: relative;
+}
+
+h4 {
+  text-align: center;
+}
+
+.button-container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  width: auto;
+  height: 45px;
+  background: transparent;
+  text-transform: uppercase;
+  border: 2px solid var(--main-font);
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: var(--main-font);
+  margin-left: 30px;
+  transition: 0.3s;
+  padding: 10px;
+}
+
+.p-inputtext:enabled:hover {
+  cursor: default !important;
+}
+
+.p-colorpicker-preview {
+  width: 200px !important;
+  border: 1px solid black !important;
+}
+
+.p-checkbox .p-checkbox-box.p-highlight {
+  border-color: black !important;
+  background: black !important;
+}
+
+.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
+  border-color: black !important;
+}
+
+.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-focus {
+  box-shadow: 0 0 0 0.2rem #2a2b2c !important;
+  border-color: black !important;
+}
+
+.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover {
+  border-color: black !important;
+  background: black !important;
+}
+
+.p-multiselect:not(.p-disabled):hover {
+  border-color: black !important;
+}
+
+.p-multiselect:not(.p-disabled).p-focus {
+  box-shadow: 0 0 0 0.2rem #2a2b2c !important;
+  border-color: black !important;
+}
+
+.p-multiselect {
+  width: 100% !important;
+}
+
+.dropdown-element {
+  width: 100% !important;
+}
+
+.dropdown-element > * {
+  width: 100% !important;
+}
+
+.p-multiselect .p-multiselect-label {
+  padding: 0.5rem 0.5rem;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.p-multiselect-panel .p-multiselect-header .p-multiselect-close:focus {
+  box-shadow: 0 0 0 0.2rem #2a2b2c !important;
+}
+
+.p-multiselect-panel .p-multiselect-header .p-multiselect-close:focus {
+  box-shadow: 0 0 0 0.2rem #2a2b2c !important;
+}
+
+.p-inputtext:enabled:hover {
+  border-color: black !important;
+}
+
+.p-inputtext:enabled:focus {
+  box-shadow: 0 0 0 0.2rem #2a2b2c !important;
+  border-color: black !important;
+}
+
+.p-multiselect-panel .p-multiselect-items .p-multiselect-item.p-highlight {
+  color: white !important;
+  background: #696969 !important;
+}
+
+.p-multiselect.p-multiselect-chip .p-multiselect-token {
+  color: white !important;
+  background: #696969 !important;
+}
+
+.btn:hover {
+  background: var(--main-font);
+  color: var(--third-color);
+}
+
+.p-dialog .p-dialog-header {
+  display: none !important;
+}
+
+.p-component:hover {
+  cursor: pointer !important;
+}
+
+.p-confirm-dialog .p-dialog-content {
+  flex-direction: column !important;
+  text-align: center !important;
+}
+
+.p-dialog .p-dialog-footer {
+  justify-content: center !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.p-dialog.p-confirm-dialog .p-confirm-dialog-icon {
+  padding: 10px !important;
+}
+
+.p-button {
+  background-color: black !important;
+  border: none !important;
+}
+
+.p-button:hover {
+  color: var(--gold) !important;
+  border: none !important;
+}
+
+.p-steps .p-steps-item.p-highlight .p-steps-number {
+  background: black !important;
+  color: white !important;
+}
+
+a:hover {
+  color: var(--gold) !important;
+}
+
+.active-link {
+  color: var(--gold) !important;
+}
+
+.btn:disabled, .btn[disabled=disabled] {
+  cursor: not-allowed;
+  background: grey !important;
+}
+
+
+// Media
+
+@media (max-width: 800px) {
+  .searcher {
+    display: none;
+  }
+  .footer {
+    display: none;
+  }
+}

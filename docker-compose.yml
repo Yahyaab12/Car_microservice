@@ -1,0 +1,95 @@
+version: "3.8"
+services:
+  rabbitmq:
+    image: rabbitmq:3.12.2-management-alpine
+    container_name: 'rentacar-rabbitmq'
+    command: ["bash", "-c", "chmod 600 /var/lib/rabbitmq/.erlang.cookie && rabbitmq-server"]
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+      - ./.docker-runtime-data/rabbitmq/data/:/var/lib/rabbitmq/
+      - ./.docker-runtime-data/rabbitmq/log/:/var/log/rabbitmq
+    networks:
+      - rentacar
+    environment:
+      - RABBITMQ_DEFAULT_USER=rentacar
+      - RABBITMQ_DEFAULT_PASS=rentacar_pass
+
+  db:
+    image: mysql:8.0
+    command: --default-authentication-plugin=caching_sha2_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Y@hya@bida123
+      MYSQL_DATABASE: carrentams
+    ports:
+      - "3316:3306"
+    volumes:
+      - ./db:/var/lib/mysql
+    networks:
+      - rentacar
+
+  backend:
+    image: rentacar-backend
+    restart: always
+    environment:
+      SPRING_APPLICATION_NAME: RentaCar
+      SERVER_PORT: 8086
+      RENTACAR_FRONT_END_URL: http://frontend:80/
+      RENTACAR_BACK_END_URL: http://backend:8086/
+      SPRING_JACKSON_DATE_FORMAT: com.fasterxml.jackson.databind.util.StdDateFormat
+      RENTACAR_SECURITY_ENABLED: "true"
+      RENTACAR_SECURITY_ISSUER: RentaCar
+      RENTACAR_SECURITY_JWT_EXPIRATION_TIME: PT2H
+      RENTACAR_SECURITY_JWT_LONGER_EXPIRATION_TIME: PT12H
+      RENTACAR_SECURITY_MFA_TOTP_SECRET_LENGTH: 20
+      RENTACAR_SECURITY_MFA_TOTP_CODE_LENGTH: 6
+      RENTACAR_SECURITY_MFA_TOTP_CODE_TIME: 30
+      RENTACAR_SECURITY_MFA_TOTP_RECOVERY_CODES_LENGTH: 16
+      RENTACAR_SECURITY_MFA_TOTP_RECOVERY_CODES_GROUPS: 4
+      RENTACAR_SECURITY_MFA_TOTP_RECOVERY_CODES_COUNT: 8
+      RENTACAR_SECURITY_ACCOUNT_ACTIVATION_TOKEN_EXPIRATION_TIME: PT2H
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/carrentams
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: Y@hya@bida123
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
+      SPRING_JPA_SHOW_SQL: "true"
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQL8Dialect
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_FLYWAY_ENABLED: "false"
+      RENTACAR_MAIL_SENDER_ENABLED: "true"
+      SPRING_MAIL_HOST: smtp.gmail.com
+      SPRING_MAIL_PORT: 587
+      SPRING_MAIL_USERNAME: abiday1999@gmail.com
+      SPRING_MAIL_PASSWORD: xppx empa qoov zytf
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_AUTH: "true"
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE: "true"
+      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_RABBITMQ_USERNAME: rentacar
+      SPRING_RABBITMQ_PASSWORD: rentacar_pass
+      RABBIT_EXCHANGE_NAME: rentacarExchange
+      RABBIT_QUEUE_MAIL_SEND_NAME: mail-send
+      RABBIT_QUEUE_ACCOUNT_ACTIVATION_REQUEST_NAME: account.activation.request
+    ports:
+      - "8585:8086"
+    networks:
+      - rentacar
+    depends_on:
+      - db
+      - rabbitmq
+
+  frontend:
+    image: rentacar-frontend
+    restart: always
+    ports:
+      - "4203:80"
+    depends_on:
+      - backend
+      - rabbitmq
+    networks:
+      - rentacar
+
+networks:
+  rentacar:
+    driver: bridge

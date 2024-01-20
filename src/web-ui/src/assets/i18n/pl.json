@@ -1,0 +1,565 @@
+{
+  "title": {
+    "main": "Location de voitures",
+    "sign-in": "Se connecter",
+    "sign-in-mfa": "Se connecter",
+    "sign-up": "S'inscrire",
+    "not-found": "Page non trouvée",
+    "profile": "Profil",
+    "profile-edit": "Édition du profil",
+    "profile-security": "Sécurité",
+    "vehicle-list": "Recherche de véhicules",
+    "vehicle-details": "Détails du véhicule",
+    "reservation": "Réservation",
+    "activation": "Activation du compte",
+    "account-activated": "Compte activé",
+    "reactivation-account": "Réactivation du compte",
+    "admin-panel": "Panneau d'administration",
+    "admin-add-vehicle": "Ajouter un véhicule",
+    "admin-remove-vehicle": "Supprimer un véhicule",
+    "reservation-update-status": "Mise à jour du statut de la réservation",
+    "password-reset": "Réinitialisation du mot de passe",
+    "new-password": "Nouveau mot de passe",
+    "reservation-payment-info": "Informations de paiement pour la réservation",
+    "myReservations": "Mes réservations"
+  },
+  "components": {
+    "authentication": {
+      "sign-in": {
+        "sign-in-header": "Se connecter",
+        "sign-in-mfa-header": "Entrez le code de vérification à deux étapes",
+        "mfa-code": {
+          "label": "Code"
+        },
+        "login": {
+          "label": "Identifiant"
+        },
+        "password": {
+          "label": "Mot de passe"
+        },
+        "rememberMe": {
+          "label": "Se souvenir de moi"
+        },
+        "buttons": {
+          "sign-in": "Se connecter",
+          "sign-up": "S'inscrire",
+          "password-reset": "Mot de passe oublié?"
+        }
+      }
+    },
+    "profile-edit": {
+      "form": {
+        "title": "Édition du profil utilisateur",
+        "button": {
+          "label": "Mettre à jour les données"
+        },
+        "label": {
+          "firstName": "Prénom",
+          "lastName": "Nom de famille",
+          "email": "E-mail",
+          "birthDate": "Date de naissance",
+          "city": "Ville",
+          "zipCode": "Code postal",
+          "street": "Rue et numéro de maison",
+          "phoneNumber": "Numéro de téléphone"
+        },
+        "errors": {
+          "email": {
+            "email": "Format d'adresse e-mail incorrect"
+          },
+          "phoneNumber": {
+            "pattern": "Format de numéro de téléphone incorrect"
+          },
+          "zipCode": {
+            "pattern": "Format de code postal incorrect"
+          },
+          "required": "Ce champ est requis",
+          "icon-not-saved": "L'icône n'a pas été enregistrée. Mettez à jour le profil pour conserver les changements."
+        },
+        "tooltips": {
+          "icon-upload": "Cliquez sur l'icône pour télécharger une nouvelle photo."
+        }
+      },
+      "toasts": {
+        "update": {
+          "success": "Profil utilisateur mis à jour avec succès",
+          "error": "Impossible de mettre à jour le profil utilisateur"
+        }
+      }
+    },
+    "sign-up": {
+      "labels": {
+        "title": "Inscription",
+        "username": "Nom d'utilisateur",
+        "email": "E-mail",
+        "password": "Mot de passe",
+        "password-confirm": "Confirmez le mot de passe",
+        "buttons": {
+          "sign-up": "S'inscrire"
+        }
+      },
+      "errors": {
+        "required": "Ce champ est obligatoire",
+        "password-doesnt-match": "Les mots de passe ne correspondent pas",
+        "min-length": "La longueur minimale est de 5 caractères",
+        "email": "Format d'adresse e-mail incorrect"
+      },
+      "toasts": {
+        "sign-up-success": "Inscription réussie. Un lien d'activation a été envoyé à l'e-mail fourni.",
+        "sign-up-error": "L'inscription a échoué. Veuillez réessayer."
+      }
+    },
+    "searcher": {
+      "labels": {
+        "pickup-locations": "Entrez la ville, l'aéroport ou l'adresse"
+      },
+      "buttons": {
+        "search": "Rechercher"
+      }
+    },
+    "vehicle-card": {
+      "labels": {
+        "show-details": "Afficher les détails du véhicule",
+        "ac": "Climatisation",
+        "insurance": "Service, Pneus, Assurance inclus",
+        "flexible": "Flexibilité chaque jour",
+        "no-extra-payment": "Pas de frais cachés",
+        "assistance": "Assistance 24/7",
+        "full-led": "Éclairage LED complet",
+        "leather": "Sièges en cuir",
+        "multi-steering-wheel": "Volant multifonction",
+        "bluetooth": "Bluetooth",
+        "gas": "Essence",
+        "diesel": "Diesel",
+        "hybrid": "Hybride",
+        "electric": "Électrique",
+        "avg-fuel-consumption": "Consommation moyenne de carburant (l/100km)",
+        "price": "Prix de la location à partir de"
+      },
+      "buttons": {
+        "reserve": "Réserver le véhicule",
+        "details": "Détails du véhicule"
+      }
+    },
+    "vehicle-list": {
+      "labels": {
+        "no-vehicles": "Aucun véhicule disponible à la date sélectionnée"
+      }
+    },
+    "vehicle-details": {
+      "labels": {
+        "production-year": "Année de production :",
+        "amount-of-seats": "Nombre de places :",
+        "category": "Catégorie :",
+        "color": "Couleur :",
+        "rims-inch": "Taille des jantes :",
+        "engine-type": "Type de moteur :",
+        "avg-fuel-consumption": "Consommation moyenne de carburant (l/100km) :",
+        "engine-power": "Puissance du moteur :",
+        "engine-capacity": "Cylindrée du moteur :",
+        "engine-transmission": "Transmission :",
+        "ac": "Climatisation",
+        "pdc-front": "Capteurs de stationnement avant :",
+        "pdc-rear": "Capteurs de stationnement arrière :",
+        "bluetooth": "Bluetooth :",
+        "led-front": "Phares LED avant :",
+        "led-rear": "Phares LED arrière :",
+        "xenon-front": "Phares XENON avant :",
+        "leather": "Sièges en cuir :",
+        "multi-steering-wheel": "Volant multifonction :",
+        "cruise-control": "Régulateur de vitesse :"
+      },
+      "buttons": {
+        "reserve": "Réserver",
+        "disabled": "Connectez-vous pour réserver le véhicule",
+        "notAvailable": "Véhicule non disponible à la date sélectionnée"
+      },
+      "reserve": {
+        "labels": {
+          "reserve": "Réserver",
+          "availability": "Disponibilité",
+          "terms": "Conditions générales",
+          "caution": "Caution de 1500 zł payable en espèces",
+          "mileageLimit": "Limite de kilométrage par jour : 300 km",
+          "price": "Coût de la location "
+        }
+      }
+    },
+    "activation-account": {
+      "toasts": {
+        "error": "Le jeton a expiré. Veuillez contacter l'administrateur de l'application pour activer le compte."
+      }
+    },
+    "account-activated": {
+      "labels": {
+        "title": "Compte activé.",
+        "sign-in": "Se connecter"
+      }
+    },
+    "reactivation-account": {
+      "labels": {
+        "title": "Lien d'activation",
+        "login": "Identifiant"
+      },
+      "buttons": {
+        "resend": "Renvoyer"
+      },
+      "toasts": {
+        "success": "Le lien d'activation a été renvoyé à l'e-mail indiqué",
+        "error": "La tentative d'envoi du lien a échoué"
+      }
+    },
+    "password-reset": {
+      "labels": {
+        "title": "Réinitialisation du mot de passe",
+        "login": "Identifiant"
+      },
+      "buttons": {
+        "resend": "Réinitialiser le mot de passe"
+      },
+      "toasts": {
+        "success": "Le lien de réinitialisation du mot de passe a été envoyé à l'e-mail indiqué",
+        "error": "La tentative d'envoi du lien a échoué"
+      },
+      "errors": {
+        "required": "Ce champ est obligatoire",
+        "min-length": "La longueur minimale est de 5 caractères"
+      }
+    },
+    "new-password": {
+      "labels": {
+        "title": "Nouveau mot de passe",
+        "password": "Mot de passe",
+        "confirm-password": "Confirmez le mot de passe"
+      },
+      "buttons": {
+        "set": "Définir un nouveau mot de passe"
+      },
+      "toasts": {
+        "update-success": "Le nouveau mot de passe a été enregistré avec succès",
+        "update-error": "Le nouveau mot de passe n'a pas été enregistré avec succès",
+        "token-expired": "Le jeton a expiré. Générez un nouveau"
+      },
+      "errors": {
+        "required": "Ce champ est obligatoire",
+        "min-length": "La longueur minimale est de 5 caractères",
+        "doesnt-match": "Les mots de passe ne correspondent pas"
+      }
+    },
+    "main": {
+      "labels": {
+        "title": "Testez\nla vitesse\nsur votre propre peau",
+        "text": "Découvrez une large gamme de voitures de sport (et plus encore) et choisissez celle qui vous convient le mieux."
+      },
+      "buttons": {
+        "reserve": "Réserver"
+      }
+    },
+    "admin-side-menu": {
+      "labels": {
+        "add-vehicle": "Ajouter un véhicule",
+        "remove-vehicle": "Supprimer un véhicule",
+        "reservation-update-status": "Mettre à jour le statut de la réservation"
+      }
+    },
+    "admin-add-vehicle": {
+      "labels": {
+        "photos": "Sélectionnez des photos",
+        "deletePhoto": "Supprimer",
+        "brand": "Marque",
+        "model": "Modèle",
+        "productionYear": "Année de production",
+        "seatsAmount": "Nombre de places",
+        "basicPrice": "Prix de base",
+        "color": "Couleur",
+        "rimsInch": "Taille des jantes [\"]",
+        "capacity": "Cylindrée [cm3]",
+        "type": "Type de moteur",
+        "power": "Puissance [ch]",
+        "torque": "Couple [Nm]",
+        "avgFuelConsumption": "Consommation moyenne de carburant [l/100km]",
+        "transmission": "Transmission",
+        "ac": "Climatisation",
+        "frontPDC": "Capteurs de stationnement avant",
+        "rearPDC": "Capteurs de stationnement arrière",
+        "ledFrontLights": "Phares LED avant",
+        "xenonFrontLights": "Phares Xenon avant",
+        "ledRearLights": "Phares LED arrière",
+        "leatherSeats": "Sièges en cuir",
+        "multifunctionalSteeringWheel": "Volant multifonction",
+        "cruiseControl": "Régulateur de vitesse",
+        "category": "Catégorie du véhicule",
+        "addVehicle": "Ajouter un véhicule"
+      },
+      "dialog": {
+        "header": "Ajouter un véhicule",
+        "message": "Voulez-vous vraiment ajouter un nouveau véhicule ?",
+        "acceptLabel": "Oui",
+        "rejectLabel": "Non"
+      },
+      "toasts": {
+        "success": "Le nouveau véhicule a été ajouté",
+        "error": "Impossible d'ajouter le nouveau véhicule"
+      },
+      "errors": {
+        "required": "Ce champ est obligatoire"
+      }
+    },
+    "profile-security": {
+      "titles": {
+        "main": "Sécurité",
+        "passwordChange": "Changement de mot de passe",
+        "mfa": "Authentification à deux facteurs"
+      },
+      "buttons": {
+        "passwordChange": "Changer le mot de passe"
+      },
+      "toasts": {
+        "passwordChangeSuccess": "Une procédure de réinitialisation de mot de passe a été envoyée à votre adresse e-mail.",
+        "passwordChangeError": "Impossible de démarrer la procédure de réinitialisation de mot de passe",
+        "passwordChangeWarn": "Erreur inattendue"
+      }
+    },
+    "profile": {
+      "edit": "Modifier le profil",
+      "security": "Sécurité"
+    },
+    "profile-panel": {
+      "profile": "Profil",
+      "admin": "Panneau d'administration",
+      "my-reservations": "Mes réservations",
+      "logout": "Se déconnecter"
+    },
+    "profile-mfa-totp": {
+      "label": "Scannez le code QR dans l'application et saisissez la clé générée ci-dessous",
+      "6digitCode": "Code à 6 chiffres"
+    },
+    "profile-mfa": {
+      "buttons": {
+        "save": "Enregistrer",
+        "configure": "Configurer",
+        "details": "Détails",
+        "delete": "Supprimer"
+      },
+      "totp": {
+        "title": "Application d'authentification pour l'authentification à deux facteurs",
+        "info": "Connexion à deux facteurs (2FA) avec utilisation d'une application d'authentification. Lors de la connexion, saisissez le code de sécurité reçu dans l'application d'authentification."
+      },
+      "dialog": {
+        "delete": {
+          "header": "Confirmer la suppression",
+          "message": "Voulez-vous vraiment supprimer l'authentification à deux facteurs?",
+          "accept": "Oui",
+          "reject": "Non"
+        },
+        "recovery-codes": {
+          "header": "Codes de récupération",
+          "accept": "Compris",
+          "message": "Enregistrez les codes de sécurité ci-dessous. Ils seront nécessaires en cas de perte d'accès à la vérification à deux facteurs:<br><br>{{0}}"
+        },
+        "mfa-info": {
+          "message": "Authentification à deux facteurs sélectionnée {{type}} <br>Date d'activation : {{date}}"
+        }
+      }
+    },
+    "reservation-payment-info": {
+      "header": "Véhicule réservé",
+      "firstMessage": "Le véhicule que vous avez choisi a été réservé avec succès!",
+      "secondMessage": "Nous avons envoyé un lien de paiement pour la réservation à l'adresse e-mail que vous avez indiquée.\nLe paiement doit être effectué au plus tard 24 heures avant la prise du véhicule, sinon la réservation sera annulée."
+    },
+    "reservation": {
+      "buttons": {
+        "back": "Retour",
+        "next": "Suivant",
+        "reserve": "Réserver",
+        "cancel": "Annuler"
+      },
+      "summary-step": {
+        "labels": {
+          "dateFrom": "Date de début",
+          "dateEnd": "Date de fin",
+          "totalPrice": "Prix total",
+          "firstName": "Prénom du locataire",
+          "lastName": "Nom du locataire"
+        }
+      },
+      "reserveDialog": {
+        "header": "Confirmation",
+        "message": "Voulez-vous vraiment confirmer la réservation?",
+        "acceptLabel": "Oui",
+        "rejectLabel": "Non"
+      },
+      "toasts": {
+        "reservationSuccess": "La réservation a été enregistrée avec succès",
+        "reservationError": "La réservation n'a pas été enregistrée avec succès",
+        "reservationNotFound": "Réservation non trouvée",
+        "reservationReadOnly": "Cette réservation a déjà été créée. Impossible de la modifier",
+        "reservationVehicleNotAvailable": "Le véhicule sélectionné n'est plus disponible aux dates choisies"
+      }
+    },
+    "app": {
+      "labels": {
+        "mainPage": "Page principale",
+        "cars": "Flotte",
+        "contact": "Contact",
+        "signIn": "Se connecter",
+        "logout": "Se déconnecter",
+        "profile": "Profil",
+        "changeLanguage": "Changer de langue",
+        "reserve": "Réserver",
+        "myReservations": "Mes réservations"
+      }
+    },
+    "not-found": {
+      "notFound": "Page non trouvée"
+    },
+    "my-reservations": {
+      "labels": {
+        "noReservations": "Aucune réservation"
+      },
+      "cancelDialog": {
+        "header": "Confirmation",
+        "message": "Voulez-vous vraiment annuler la réservation?",
+        "acceptLabel": "Oui",
+        "rejectLabel": "Non"
+      },
+      "toasts": {
+        "reservationCancelled": "La réservation a été annulée",
+        "reservationCancelledError": "La réservation n'a pas été annulée"
+      }
+    },
+    "my-reservation-card": {
+      "labels": {
+        "dateFrom": "Du",
+        "dateTo": "Au",
+        "status": "Statut",
+        "vehicleName": "Nom du véhicule"
+      },
+      "buttons": {
+        "details": "Détails",
+        "cancel": "Annuler"
+      }
+    },
+    "admin-remove-vehicle": {
+      "dialog": {
+        "header": "Confirmer la suppression",
+        "message": "Voulez-vous vraiment supprimer le véhicule sélectionné?",
+        "accept": "Oui",
+        "reject": "Non"
+      },
+      "toasts": {
+        "removeSuccess": "Le véhicule a été supprimé",
+        "removeError": "Le véhicule n'a pas été supprimé"
+      }
+    },
+    "reservation-status-update": {
+      "toasts": {
+        "updateSuccess": "Le statut de la réservation a été mis à jour",
+        "updateError": "Le statut de la réservation n'a pas été mis à jour"
+      },
+      "labels": {
+        "noReservations": "Aucune réservation"
+      }
+    },
+    "reservation-status-update-card": {
+      "labels": {
+        "dateFrom": "À partir du:",
+        "dateTo": "Jusqu'au:"
+      },
+      "buttons": {
+        "changeStatus": "Changer le statut"
+      }
+    }
+  },
+  "services": {
+    "sign-in": {
+      "success": "Connexion réussie",
+      "error": "La connexion a échoué"
+    },
+    "log-out": {
+      "success": "Déconnexion réussie",
+      "error": "La déconnexion a échoué"
+    },
+    "token-expire": "Le jeton a expiré. Veuillez vous connecter à nouveau."
+  },
+  "primeng": {
+    "dayNames": [
+      "Dimanche",
+      "Lundi",
+      "Mardi",
+      "Mercredi",
+      "Jeudi",
+      "Vendredi",
+      "Samedi"
+    ],
+    "dayNamesShort": [
+      "Dim",
+      "Lun",
+      "Mar",
+      "Mer",
+      "Jeu",
+      "Ven",
+      "Sam"
+    ],
+    "dayNamesMin": [
+      "D",
+      "L",
+      "M",
+      "Mer",
+      "J",
+      "V",
+      "S"
+    ],
+    "monthNames": [
+      "Janvier",
+      "Février",
+      "Mars",
+      "Avril",
+      "Mai",
+      "Juin",
+      "Juillet",
+      "Août",
+      "Septembre",
+      "Octobre",
+      "Novembre",
+      "Décembre"
+    ],
+    "monthNamesShort": [
+      "Jan",
+      "Fév",
+      "Mar",
+      "Avr",
+      "Mai",
+      "Juin",
+      "Juil",
+      "Août",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Déc"
+    ],
+    "today": "Aujourd'hui",
+    "weekHeader": "Semaine",
+    "firstDayOfWeek": 1
+  },
+  "additional": {
+    "engine-type": {
+      "gas": "Essence",
+      "diesel": "Diesel",
+      "hybrid": "Hybride",
+      "electric": "Électrique"
+    },
+    "transmission": {
+      "manual": "Manuelle",
+      "automatic": "Automatique"
+    },
+    "colors": {
+      "white": "Blanc",
+      "red": "Rouge",
+      "blue": "Bleu",
+      "green": "Vert",
+      "yellow": "Jaune",
+      "black": "Noir"
+    }
+  }
+}
