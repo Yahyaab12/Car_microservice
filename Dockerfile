@@ -6,4 +6,4 @@ COPY /target/rentacar-0.0.1-SNAPSHOT.jar .
 
 EXPOSE 8086
 
-ENTRYPOINT ["java", "-jar", "rentacar-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "RentaCar-0.0.1-SNAPSHOT.jar"]
